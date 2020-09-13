@@ -1,0 +1,102 @@
+.container {
+  max-width: 1920px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+button:focus {
+  outline: none;
+  outline-color: unset;
+}
+button {
+  cursor: pointer;
+}
+
+body {
+  font-size: 14px;
+  font-family: "Quicksand", sans-serif;
+  background-color: #d6e6ef;
+  background-size: cover;
+  background-position: top center;
+  color: black;
+}
+img {
+  width: 100%;
+}
+
+.header__title {
+  background-color: gainsboro;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+.todo__input {
+  width: 85%;
+  padding: 8px 10px;
+  margin: 20px auto;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.todo__button {
+  text-decoration: none;
+  outline: none;
+  display: inline-block;
+  padding: 7px 20px;
+  margin: 10px 20px;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #8fd4c1;
+  border-radius: 8px;
+  font-family: "Montserrat", sans-serif;
+  color: #43524e;
+  transition: 0.2s ease-in-out;
+  font-weight: bold;
+}
+
+@media (max-width: 500px) {
+  .todo__button {
+    margin: 10px auto;
+  }
+}
+
+.todo__button:before {
+  content: "";
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.5)
+  );
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: -8px;
+  left: -75px;
+  transform: skewX(-45deg);
+}
+.todo__button:hover {
+  background: #8fd4c1;
+  color: #fff;
+}
+.todo__button__active {
+  background: #8fd4c1;
+  color: #fff;
+}
+.todo__button:active {
+  background: #8fd4c1;
+  color: #fff;
+}
+
+.todo__button:hover:before {
+  left: 150px;
+  transition: 0.5s ease-in-out;
+}
